@@ -1,4 +1,13 @@
 \usepackage{unicode-math}
-\setsansfont{Fira Sans}
-\setmainfont{Fira Sans}
-\setmathfont{Fira Math}
+\IfFontExistsTF{Fira Sans}{
+  \setsansfont{Fira Sans}
+  \setmainfont{Fira Sans}
+}{
+  \setsansfont{Arial}
+  \setmainfont{Arial}
+}
+\IfFontExistsTF{Fira Math}{
+  \setmathfont{Fira Math}
+}{
+  \setmathfont{STIX Two Math}
+}

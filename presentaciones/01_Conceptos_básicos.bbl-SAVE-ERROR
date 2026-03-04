@@ -1,0 +1,186 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{INCOSE}{book}{}{}
+      \name{editor}{5}{}{%
+        {{hash=c68f664a742a5c52c7eddb01dff01086}{%
+           family={Walden},
+           familyi={W\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ecd799a316a38a38da5150a32c0a206c}{%
+           family={Roedler},
+           familyi={R\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7d420c1d36c2d190b3012884f5e784e3}{%
+           family={Forsberg},
+           familyi={F\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod}}}%
+        {{hash=f3e23015a62611f59a7c04a11da0a381}{%
+           family={Hamelin},
+           familyi={H\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod}}}%
+        {{hash=34391b7dbb0e7d08d3650999c94d00a1}{%
+           family={Shortell},
+           familyi={S\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{a72eeacbec35b0fe6e1f8aed37b87d42}
+      \strng{fullhash}{740e366fc89de95debee8753d8895bd0}
+      \strng{fullhashraw}{740e366fc89de95debee8753d8895bd0}
+      \strng{bibnamehash}{740e366fc89de95debee8753d8895bd0}
+      \strng{editorbibnamehash}{740e366fc89de95debee8753d8895bd0}
+      \strng{editornamehash}{a72eeacbec35b0fe6e1f8aed37b87d42}
+      \strng{editorfullhash}{740e366fc89de95debee8753d8895bd0}
+      \strng{editorfullhashraw}{740e366fc89de95debee8753d8895bd0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{title}{INCOSE Systems Engineering Handbook: A Guide for System Life Cycle Processes and Activities}
+      \field{year}{2015}
+    \endentry
+    \entry{modelica}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7894e6cf2de000008d4cccb36b24d0ce}{%
+           family={Fritzson},
+           familyi={F\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{7894e6cf2de000008d4cccb36b24d0ce}
+      \strng{fullhash}{7894e6cf2de000008d4cccb36b24d0ce}
+      \strng{fullhashraw}{7894e6cf2de000008d4cccb36b24d0ce}
+      \strng{bibnamehash}{7894e6cf2de000008d4cccb36b24d0ce}
+      \strng{authorbibnamehash}{7894e6cf2de000008d4cccb36b24d0ce}
+      \strng{authornamehash}{7894e6cf2de000008d4cccb36b24d0ce}
+      \strng{authorfullhash}{7894e6cf2de000008d4cccb36b24d0ce}
+      \strng{authorfullhashraw}{7894e6cf2de000008d4cccb36b24d0ce}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Principles of object-oriented modeling and simulation with Modelica 3.3: a cyber-physical approach}
+      \field{year}{2014}
+    \endentry
+    \entry{Fraden_2016}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=e76d46be5d7ee9722f07829c42358f70}{%
+           family={Fraden},
+           familyi={F\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{e76d46be5d7ee9722f07829c42358f70}
+      \strng{fullhash}{e76d46be5d7ee9722f07829c42358f70}
+      \strng{fullhashraw}{e76d46be5d7ee9722f07829c42358f70}
+      \strng{bibnamehash}{e76d46be5d7ee9722f07829c42358f70}
+      \strng{authorbibnamehash}{e76d46be5d7ee9722f07829c42358f70}
+      \strng{authornamehash}{e76d46be5d7ee9722f07829c42358f70}
+      \strng{authorfullhash}{e76d46be5d7ee9722f07829c42358f70}
+      \strng{authorfullhashraw}{e76d46be5d7ee9722f07829c42358f70}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Handbook of Modern Sensors}
+      \field{year}{2016}
+    \endentry
+    \entry{isq_iso80000_1}{standard}{}{}
+      \list{organization}{2}{%
+        {International Organization for Standardization}%
+        {International Electrotechnical Commission}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{number}{ISO/IEC 80000-1:2022}
+      \field{title}{Quantities and units --- Part 1: General}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.iso.org/standard/64973.html
+      \endverb
+      \verb{url}
+      \verb https://www.iso.org/standard/64973.html
+      \endverb
+    \endentry
+    \entry{bipm_si_2019}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=ab57bef64a730b7a91e5aa0760227a4f}{%
+           family={{Bureau International des Poids et Mesures}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab57bef64a730b7a91e5aa0760227a4f}
+      \strng{fullhash}{ab57bef64a730b7a91e5aa0760227a4f}
+      \strng{fullhashraw}{ab57bef64a730b7a91e5aa0760227a4f}
+      \strng{bibnamehash}{ab57bef64a730b7a91e5aa0760227a4f}
+      \strng{authorbibnamehash}{ab57bef64a730b7a91e5aa0760227a4f}
+      \strng{authornamehash}{ab57bef64a730b7a91e5aa0760227a4f}
+      \strng{authorfullhash}{ab57bef64a730b7a91e5aa0760227a4f}
+      \strng{authorfullhashraw}{ab57bef64a730b7a91e5aa0760227a4f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{SI Brochure, updated in 2022}
+      \field{title}{The International System of Units (SI), 9th edition}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.bipm.org/en/publications/si-brochure
+      \endverb
+      \verb{url}
+      \verb https://www.bipm.org/en/publications/si-brochure
+      \endverb
+    \endentry
+    \entry{ansi_isa_5_1}{standard}{}{}
+      \list{organization}{1}{%
+        {International Society of Automation}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{number}{ANSI/ISA-5.1-2009 (R2022)}
+      \field{title}{Instrumentation Symbols and Identification}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.isa.org/products/ansi-isa-5-1-2009-r2022-instrumentation-symbo
+      \endverb
+      \verb{url}
+      \verb https://www.isa.org/products/ansi-isa-5-1-2009-r2022-instrumentation-symbo
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,8 +1,9 @@
+% !TEX root = 00_instructivo.tex
 \chapter{Sensores de estímulos eléctricos}
 \section{\obj}
 \capacidad
 \begin{itemize}
-    \item Configurar un sensor digital para lograr una medición eléctrica con la mayor resolución posible.
+    \item Programar un Arduino con funciones básicas como introducción al microcontrolador.
     \item Calcular el error asociado a la medición utilizando una multimetro digital de alta precisión.
 \end{itemize}
 
@@ -10,8 +11,10 @@
 \textbf{A suministrar por la Escuela:}
 \begin{itemize}
     \item 1 ARDUINO UNO R4 MINIMA
-    \item 1 sensor digital de voltaje, corriente y potencia (INA219)
-    \item 1 mini breadboard
+    \item Cable USB de conexión del Arduino
+    \item 1 potenciómetro (5 k$\Omega$ o más)
+    \item 2 LEDs
+    \item 2 resistencias de 330 $\Omega$ (o un valor cercano)
     \item Cables de interconexión (jumpers) macho-macho
 \end{itemize}
 
@@ -21,117 +24,76 @@
     \item Realice las conexiones del circuito tal y como se indica en la Figura \ref{fig:elec1}.
     \item Abra el programa Arduino IDE
     
+    % Requiere en el preámbulo:
+    % \usepackage{circuitikz}
+    % \usepackage{float}
+    % \usepackage{siunitx}
+
+    % Requiere en el preámbulo:
+    % \usepackage{circuitikz}
+    % \usepackage{float}
+    % \usepackage{siunitx}
+
     \begin{figure}[H]
-        \tikzset{comm/.style={muxdemux, muxdemux def={Lh=5, Rh=5, NL=2, NB=0, NR=0, w=2}}}
-        \tikzset{INA219/.style={muxdemux, muxdemux def={Lh=5, Rh=5, NL=2, NB=0, NR=6, w=2}}}
-        \centering
-        \begin{circuitikz} 
-            \draw (0,3.5) node[comm] (m){\rotatebox{90}{\small communication}}
-            (0,0) node[comm] (p){\rotatebox{90}{\small power}}
-            ;
-            \draw (m.blpin 1) node[above left]{\small SDA};
-            \draw (m.blpin 2) node[above left]{\small SCL};
-            \draw (p.blpin 1) node[above left]{\small GND};
-            \draw (p.blpin 2) node[above left]{\small +5V};
-            \draw (-5,3.2) node[INA219] (s){\rotatebox{90}{\small INA219}}
-            (s.brpin 1) node[above right]{\scriptsize IN+}
-            (s.brpin 2) node[above right]{\scriptsize IN-}
-            (s.brpin 3) node[above right]{\scriptsize SDA}
-            (s.brpin 4) node[above right]{\scriptsize SCL}
-            (s.brpin 5) node[above right]{\scriptsize GND}
-            (s.brpin 6) node[above right]{\scriptsize VCC}
-            (s.blpin 1) node[above left]{\scriptsize IN+}
-            (s.blpin 2) node[above left]{\scriptsize IN-}
-            ;
-            \draw[blue]
-            (p.blpin 2) -- ++ (-2.8,0)
-            |-
-            (s.brpin 6)
-            ;
-            \draw[green]
-            (p.blpin 1) -- ++ (-2.4,0)
-            |-
-            (s.brpin 5)
-            ;
-            \draw[red]
-            (m.blpin 2) -- ++ (-2.4,0)
-            |- 
-            (s.brpin 4)
-            ;
-            \draw[brown]
-            (m.blpin 1) -- ++ (-2.8,0)
-            |- 
-            (s.brpin 3)
-            ;
-            \draw[dashed,blue]
-            (-2.5,6) -- (1,6)node[midway, below]{UNO R4 MINIMA} -- (1,-1.5) -- (-2.5,-1.5) -- cycle
-            ;
-            \draw
-            (-9,-1)
-            to[V, v^=\SI{5}{\volt}]
-            (-9,3.5)
-            |-
-            (s.blpin 1)
-            (s.blpin 2)
-            to[short,i=$i_R$]
-            ++(-1,0)
-            -|
-            (-7,2)
-            to[R, l=$R$, v={$v_R$}]
-            ++(0,-2)
-            |-
-            (-9,-1)
-            ;
-            \draw[green]
-            (-7,-1) -- ++ (1,0)
-            |-
-            (p.blpin 1)
-            ;
-        \end{circuitikz}
-    \caption{Conexión de sensor de corriente y voltaje INA219}
+    \centering
+    \resizebox{1\textwidth}{!}{
+    \begin{circuitikz}
+    \tikzstyle{every node}=[font=\LARGE]
+    \draw (8.25,14.75) to[short, -o] (8.25,14.75) ;
+    \draw  (1.5,16.5) rectangle (7.5,6.25);
+    \draw (7,14.75) to[short, -o] (7,14.75) ;
+    \draw (7.25,15.25) to[short, -o] (8,15.25) ;
+    \draw (7.25,11.5) to[short, -o] (8,11.5) ;
+    \draw (7.25,8) to[short, -o] (8,8) ;
+    \draw (1.75,15) to[short, -o] (1,15) ;
+    \draw (1.75,8.5) to[short, -o] (1,8.5) ;
+    \draw (1.75,12) to[short, -o] (1,12) ;
+    \draw (-2.25,9.75) to[R,l={ \LARGE 5 k$\Omega$}] (-2.25,13.5);
+    \draw [-{Stealth}] (-3,11) -- (-1.5,12);
+    \node [font=\normalsize] at (2.25,15) {5 V};
+    \node [font=\normalsize] at (6.75,15.25) {12};
+    \node [font=\LARGE] at (4.75,11.75) {Arduino};
+    \node [font=\normalsize] at (6.75,11.5) {3};
+    \node [font=\normalsize] at (6.75,8) {GND};
+    \node [font=\normalsize] at (2.25,8.5) {GND};
+    \node [font=\normalsize] at (2.25,12) {A0};
+    \draw (-2.25,13.5) to[short] (-2.25,15);
+    \draw (-2.25,15) to[short] (1,15);
+    \draw (-1.5,12) to[short] (1,12);
+    \draw (-2.25,9.75) to[short] (-2.25,8.5);
+    \draw (1,8.5) to[short] (-2.25,8.5);
+    \draw (9,11.5) to[R,l={ \normalsize 330 $\Omega$}] (11,11.5);
+    \draw (9.25,15.25) to[R,l={ \normalsize 330 $\Omega$}] (11.5,15.25);
+    \draw (12,10.5) to[empty led] (12,8);
+    \draw (14.5,11.5) to[empty led] (14.5,8);
+    \draw (8,8) to[short] (14.5,8);
+    \draw (8,15.25) to[short] (9.25,15.25);
+    \draw (14.5,11.5) to[short] (14.5,15.25);
+    \draw (11.5,15.25) to[short] (14.5,15.25);
+    \draw (8,11.5) to[short] (9,11.5);
+    \draw (12,10.5) to[short] (12,11.5);
+    \draw (11,11.5) to[short] (12,11.5);
+    \end{circuitikz}
+    }
+    \caption{Circuito de Arduino con potenciómetro y dos LEDs.}
     \label{fig:elec1}
     \end{figure}
 
-    \item Incluya el siguiente código en el Arduino IDE
-    {\scriptsize 
-        \lstinputlisting[language=Arduino, numbers=none, showstringspaces=false]{L01/L01.ino}
-    }
-
-    \item Tomando en cuenta el valor de la resistencia que se le asignó, calcule el valor de la corriete esperada en el circuito utilizando la Ley de Ohm.
-    \item Investigue en el datasheet que significa el parametro PGA y como se relaciona con el rango del sensor. Ver 8.5.1
-    \item Configure el sensor para que el rango de medición sea el más adecuado para la resistencia que se le asignó, suba el código modificado al Arduino.
-    \item Realice dos mediciones de 10s de duración con una frecuencia de 1Hz al mismo tiempo que mide la corriente con un multímetro digital de alta precisión.
-    \item Calibre el sensor utilizando un multímetro digital de alta precisión y cambie nuevamente el código para que el valor medido por el sensor sea lo más cercano posible al valor medido por el multímetro. Ver 8.5.2.1. Suba el código modificado al Arduino.
-    \item Realice dos mediciones de 10s de duración con una frecuencia de 1Hz al mismo tiempo que mide la corriente con un multímetro digital de alta precisión.
-    \item Modifique el código para que tener oversampling de 100 muestras por segundo y suba el código modificado al Arduino.
-    \item Realice dos mediciones de 10s de duración con una frecuencia de 100Hz al mismo tiempo que mide la corriente con un multímetro digital de alta precisión.
-    \item Para cada ser de medicines calcule lo siguiente e incluya en una tabla:
-        \begin{itemize}
-            \item El valor promedio, $\overline{i_R}$ 
-            \item La desviación estándar, $\sigma$
-            \item El valor de la incertidumbre estándar, $\sigma_x = \sigma / \sqrt{n}$
-            \item La exactitud
-            \item La precisión
-            \item La repetibilidad
-        \end{itemize}
-        
-    \item Tome en cuenta lo siguiente:
-        \begin{itemize}
-            \item La exactitud se calculará como el mayor error relativo obtenido en cualquier punto de los datos en todas las corridas de medición.
-            \item La precisión se calculará como la mayor desviación estándar entre todas las corridas de medición.
-            \item La repetibilidad se calculará de la siguiente manera:
-            \begin{equation*}
-                \mathrm{repetibilidad} = \sqrt{\dfrac{\sum_{i=1}^n(\mathrm{error\,absoluto})^2}{n}}
-            \end{equation*}
-        \end{itemize}
+    \item Añada en la función \textit{loop()} del código una sección para leer el valor analógico del pin A0 e imprimirlo a la consola serial. Córralo y verifique que al variar el potenciómetro, varíe correctamente el valor.
+    \item Modifique el \textit{loop()} y agregue un delay, que varíe linealmente entre 100 ms y 1 s, dependiendo de la posición del potenciómetro. Córralo y verifique que ahora las lecturas se impriman en la terminal con diferentes tiempos de retraso, variando con el valor del potenciómetro.
+    \item Agregue a la función \textit{loop()} el código necesario para que el LED en el pin 12 se encienda y se apague con el retraso dado (para esto hay que agregar un segundo delay para controlar el tiempo de apagado). Córralo y verifique que los tiempos de encendido y apagado del LED varían correctamente al variar el potenciómetro.
+    \item Agregue el código necesario en \textit{loop()} para que el brillo del LED varíe también con el valor leído del potenciómetro. Córralo y verifique que el brillo del LED varíe correctamente al cambiar el valor del potenciómetro.
+    % {\scriptsize 
+    %     \lstinputlisting[language=Arduino, numbers=none, showstringspaces=false]{L01/L01.ino}
+    % }
 
 
     \section{Preguntas para el analisis de resultados}
     \begin{itemize}
-        \item ¿Cómo afecta el valor de la resistencia al rango de medición del sensor?
-        \item ¿Cómo afecta el valor de PGA al rango de medición del sensor? 
-        \item ¿En que consiste el oversampling y cómo afecta la resolución de la medición?
-        \item ¿Que es lo que más afecta la precisión de la medición?
-        \item ¿Qué es lo que más afecta la exactitud de la medición?
+        \item ¿Cuál es el rango de valores que devuelve \textit{analogRead()} en un Arduino UNO?
+        \item Con el resultado anterior, ¿cuántos bits de resolución tiene el ADC del Arduino UNO?
+        \item ¿Cómo se convierte de los valores obtenidos con \textit{analogRead()} a una medición de tensión eléctirca?
+        \item ¿Cómo calculó la fórmula para ajustar los valores obtenidos de \textit{analogRead()} a valores entre 100 ms y 1 s para la función \textit{delay()}?
+        \item Incluya el código que realizó en esta práctica en el informe.
     \end{itemize}
 \end{enumerate}

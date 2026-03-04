@@ -14,10 +14,16 @@
 \mode<presentation>
 
 \RequirePackage{fontspec}
-\setsansfont[
-    Ligatures=TeX,
-    BoldFont={* Medium},
-]{Fira Sans}
+\IfFontExistsTF{Fira Sans}{
+    \setsansfont[
+        Ligatures=TeX,
+        BoldFont={* Medium},
+    ]{Fira Sans}
+}{
+    \setsansfont[
+        Ligatures=TeX,
+    ]{Arial}
+}
 
 %\usefonttheme[onlymath]{serif}
 \usefonttheme{professionalfonts} %%cambio JRojas

@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\makeatletter
+\def\input@path{{../common/}{./}}
+\makeatother
+\input{preamble}
+
+\begin{document}
+
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw (8.25,14.75) to[short, -o] (8.25,14.75) ;
+\draw  (1.5,16.5) rectangle (7.5,6.25);
+\draw (7,14.75) to[short, -o] (7,14.75) ;
+\draw (7.25,15.25) to[short, -o] (8,15.25) ;
+\draw (7.25,11.5) to[short, -o] (8,11.5) ;
+\draw (7.25,8) to[short, -o] (8,8) ;
+\draw (1.75,15) to[short, -o] (1,15) ;
+\draw (1.75,8.5) to[short, -o] (1,8.5) ;
+\draw (1.75,12) to[short, -o] (1,12) ;
+\draw (-2.25,9.75) to[R,l={ \LARGE 5 k$\Omega$}] (-2.25,13.5);
+\draw [-{Stealth}] (-3,11) -- (-1.5,12);
+\node [font=\normalsize] at (2.25,15) {5 V};
+\node [font=\normalsize] at (6.75,15.25) {12};
+\node [font=\LARGE] at (4.75,11.75) {Arduino};
+\node [font=\normalsize] at (6.75,11.5) {3};
+\node [font=\normalsize] at (6.75,8) {GND};
+\node [font=\normalsize] at (2.25,8.5) {GND};
+\node [font=\normalsize] at (2.25,12) {A0};
+\draw (-2.25,13.5) to[short] (-2.25,15);
+\draw (-2.25,15) to[short] (1,15);
+\draw (-1.5,12) to[short] (1,12);
+\draw (-2.25,9.75) to[short] (-2.25,8.5);
+\draw (1,8.5) to[short] (-2.25,8.5);
+\draw (9,11.5) to[R,l={ \normalsize 330 $\Omega$}] (11,11.5);
+\draw (9.25,15.25) to[R,l={ \normalsize 330 $\Omega$}] (11.5,15.25);
+\draw (12,10.5) to[empty led] (12,8);
+\draw (14.5,11.5) to[empty led] (14.5,8);
+\draw (8,8) to[short] (14.5,8);
+\draw (8,15.25) to[short] (9.25,15.25);
+\draw (14.5,11.5) to[short] (14.5,15.25);
+\draw (11.5,15.25) to[short] (14.5,15.25);
+\draw (8,11.5) to[short] (9,11.5);
+\draw (12,10.5) to[short] (12,11.5);
+\draw (11,11.5) to[short] (12,11.5);
+\end{circuitikz}
+}
+
+\label{fig:my_label}
+\end{figure}
+
+\end{document}
