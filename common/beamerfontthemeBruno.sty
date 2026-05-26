@@ -13,17 +13,32 @@
 
 \mode<presentation>
 
-\RequirePackage{fontspec}
-\IfFontExistsTF{Fira Sans}{
-    \setsansfont[
-        Ligatures=TeX,
-        BoldFont={* Medium},
-    ]{Fira Sans}
-}{
-    \setsansfont[
-        Ligatures=TeX,
-    ]{Arial}
-}
+\RequirePackage{iftex}
+\ifxetex
+    \RequirePackage{fontspec}
+    \IfFontExistsTF{Fira Sans}{
+        \setsansfont[
+            Ligatures=TeX,
+            BoldFont={* Medium},
+        ]{Fira Sans}
+    }{
+        \setsansfont[
+            Ligatures=TeX,
+        ]{Arial}
+    }
+\else\ifluatex
+    \RequirePackage{fontspec}
+    \IfFontExistsTF{Fira Sans}{
+        \setsansfont[
+            Ligatures=TeX,
+            BoldFont={* Medium},
+        ]{Fira Sans}
+    }{
+        \setsansfont[
+            Ligatures=TeX,
+        ]{Arial}
+    }
+\fi\fi
 
 %\usefonttheme[onlymath]{serif}
 \usefonttheme{professionalfonts} %%cambio JRojas

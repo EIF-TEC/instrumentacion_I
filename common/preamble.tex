@@ -1,4 +1,9 @@
-\usepackage{fontspec}
+\RequirePackage{iftex}
+\ifxetex
+    \usepackage{fontspec}
+\else\ifluatex
+    \usepackage{fontspec}
+\fi\fi
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{amsmath}

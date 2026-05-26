@@ -1,15 +1,18 @@
 \documentclass[aspectratio=169]{beamer}
+\makeatletter
+\def\input@path{{../common/}}
+\makeatother
 \usetheme{Bruno}
-\input{comunes/preamble}
+\input{preamble}
 \title{Instrumentación I: \\ \emph{Medidas de nivel}}
 \author{
     Juan J. Rojas, Hugo Sanchez Ortiz
 }
 \institute{Instituto Tecnológico de Costa Rica}
 \date{\today}
-\background{fig/background.jpg}
+\background{background.jpg}
 \begin{document}
-\input{comunes/postamble}
+\input{postamble}
 \maketitle
 
 \newcommand{\blackandwhite}{white} %change this at the end
@@ -24,7 +27,7 @@
             \end{itemize}
         \end{column}
         \begin{column}{0.50\textwidth}
-            \includegraphics[width = 1\linewidth]{fig/Nivel/Introducción.jpg}
+            \includegraphics[width = 1\linewidth]{Nivel/Introducción.jpg}
             
             \tiny{\href{https://www.predig.com/whitepaper/level-measurement-technologies-process-control-industry}{By: Precision Digital}}
         \end{column}
@@ -34,11 +37,11 @@
 \begin{frame}{Tipos de Medición}
     \begin{columns}[c, onlytextwidth]
         \begin{column}{0.45\textwidth}
-        \includegraphics[width = 1\linewidth]{fig/Nivel/Nivel-de-liquidos.png}
+        \includegraphics[width = 1\linewidth]{Nivel/Nivel-de-liquidos.png}
         \tiny{Tomado de \cite{sole2005instrumentacion}}
         \end{column}
         \begin{column}{0.50\textwidth}
-            \includegraphics[width = 1\linewidth]{fig/Nivel/Nivel-de-solidos.png}
+            \includegraphics[width = 1\linewidth]{Nivel/Nivel-de-solidos.png}
         \end{column}
     \end{columns}
 \end{frame}
@@ -48,7 +51,7 @@
  \begin{columns}[c, onlytextwidth]
         \begin{column}{0.40\textwidth}
         \centering
-            \includegraphics[width=6.5cm]{fig/Nivel/level-sensors.jpg}
+            \includegraphics[width=6.5cm]{Nivel/level-sensors.jpg}
             \\ \tiny{Tomado de \href{https://sickusablog.com/level-measurement-choosing-right-sensor/}{aquí}}
         \end{column}
         \begin{column}{0.50\textwidth}
@@ -103,7 +106,7 @@
             \end{itemize}
         \end{column}
         \begin{column}{0.50\textwidth}
-            \includegraphics[width = 1.1\linewidth]{fig/Nivel/MedicionSonda.png}
+            \includegraphics[width = 1.1\linewidth]{Nivel/MedicionSonda.png}
             \tiny{Tomado de \cite{sole2005instrumentacion}}
         \end{column}
     \end{columns}
@@ -112,7 +115,7 @@
 \begin{frame}{Instrumentos de medición directa}
     \begin{columns}[c, onlytextwidth]
         \begin{column}{0.45\textwidth}
-        \includegraphics[width = 1\linewidth]{fig/Nivel/medidor_cristal.png}
+        \includegraphics[width = 1\linewidth]{Nivel/medidor_cristal.png}
             %\tiny{Tomado de \cite{sole2005instrumentacion}}
         \end{column}
         \begin{column}{0.50\textwidth}
@@ -145,7 +148,7 @@
             \end{itemize}
         \end{column}
         \begin{column}{0.50\textwidth}
-            \includegraphics[width = 1.1\linewidth]{fig/Nivel/flotador.png}
+            \includegraphics[width = 1.1\linewidth]{Nivel/flotador.png}
             \tiny{Tomado de \cite{sole2005instrumentacion}}
         \end{column}
     \end{columns}
@@ -157,7 +160,7 @@
     \begin{columns}[c, onlytextwidth]
         \begin{column}{0.45\textwidth}
         \centering
-        \includegraphics[width = 0.6\linewidth]{fig/Nivel/Servooperado.jpg}
+        \includegraphics[width = 0.6\linewidth]{Nivel/Servooperado.jpg}
             \tiny{\href{https://www.emerson.com}{By: Emerson}}
         \end{column}
         \begin{column}{0.55\textwidth}
@@ -184,7 +187,7 @@
             \end{itemize}
         \end{column}
         \begin{column}{0.50\textwidth}
-            \includegraphics[width = 1.1\linewidth]{fig/Nivel/Magnetostrictivo.jpg}
+            \includegraphics[width = 1.1\linewidth]{Nivel/Magnetostrictivo.jpg}
             \tiny{\href{https://www.kobold.com/uploads/files/n2es_nmt.pdf}{By: Kobold}}
         \end{column}
     \end{columns}
@@ -203,7 +206,7 @@
             \end{itemize}
         \end{column}
         \begin{column}{0.50\textwidth}
-            \includegraphics[width = 1.1\linewidth]{fig/Nivel/Manometrico.jpg}
+            \includegraphics[width = 1.1\linewidth]{Nivel/Manometrico.jpg}
             \tiny{Tomado de \cite{sole2005instrumentacion}}
             \tiny{\href{ https://sai-tech.mx/webpage/category/abb/medicion-y-analiticos/abb-medicion-nivel/}{Medidores ABB}}
            
@@ -215,7 +218,7 @@
     \begin{columns}[c, onlytextwidth]
         \begin{column}{0.45\textwidth}
         \centering
-        \includegraphics[width = 1\linewidth]{fig/Nivel/Burbujeo.png}
+        \includegraphics[width = 1\linewidth]{Nivel/Burbujeo.png}
             \tiny{\href{https://www.researchgate.net/publication/316675361_Fundamentos_de_la_medicion_de_presion_nivel_y_caudal_en_los_sistemas_hidraulicos}{Sensores Burbujeo}}
         \end{column}
         \begin{column}{0.55\textwidth}
@@ -241,7 +244,7 @@
             \end{itemize}
         \end{column}
         \begin{column}{0.50\textwidth}
-            \includegraphics[width = 1.1\linewidth]{fig/Nivel/Presión diferencial.jpg}           \tiny{\href{https://www.emerson.com/es-es/automation/measurement-instrumentation/pressure-measurement/about-differential-pressure-dp-level-measurement}{By: Emerson}}
+            \includegraphics[width = 1.1\linewidth]{Nivel/Presión diferencial.jpg}           \tiny{\href{https://www.emerson.com/es-es/automation/measurement-instrumentation/pressure-measurement/about-differential-pressure-dp-level-measurement}{By: Emerson}}
            
         \end{column}
     \end{columns}
@@ -250,7 +253,7 @@
 \begin{frame}{Instrumentos basados en presión hidrostática}
     \textbf{Medición de interfase de líquidos}
     \centering
-    \includegraphics[width = 0.8\linewidth]{fig/Nivel/Interfaz.PNG}\\
+    \includegraphics[width = 0.8\linewidth]{Nivel/Interfaz.PNG}\\
             \tiny{Tomado de \cite{sole2005instrumentacion}}
 \end{frame}
 
@@ -258,7 +261,7 @@
     \begin{columns}[c, onlytextwidth]
         \begin{column}{0.45\textwidth}
         \centering
-        \includegraphics[width = 0.8\linewidth]{fig/Nivel/Desplazamiento.jpg}\\
+        \includegraphics[width = 0.8\linewidth]{Nivel/Desplazamiento.jpg}\\
             \tiny{\href{https://www.magnetrol.com/es/transmisor-de-nivel-por-desplazador}{Transmisor de nivel por desplazamiento}}
         \end{column}
         \begin{column}{0.55\textwidth}
@@ -285,7 +288,7 @@
         \end{column}
         \begin{column}{0.50\textwidth}
         \centering
-            \includegraphics[width = 1.1\linewidth]{fig/Nivel/Resistivo.jpg}           \tiny{\href{http://www.divatecsl.com/productos/interruptor-nivel-conductivo-cfp/}{By: Divatec}}
+            \includegraphics[width = 1.1\linewidth]{Nivel/Resistivo.jpg}           \tiny{\href{http://www.divatecsl.com/productos/interruptor-nivel-conductivo-cfp/}{By: Divatec}}
            
         \end{column}
     \end{columns}
@@ -295,7 +298,7 @@
     \begin{columns}[c, onlytextwidth]
         \begin{column}{0.5\textwidth}
                 \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Nivel/capacitance.png}\\           \tiny{\href{https://www.semanticscholar.org/paper/A-Review-on-Capacitive-Type-Sensor-for-Measurement-Kumar-Rajita/2e3d6ede8338e72be9972741eafed7f50388b53a}{A Review on Capacitive-Type Sensor for Measurement of Height of Liquid Level}}
+            \includegraphics[width = 0.9\linewidth]{Nivel/capacitance.png}\\           \tiny{\href{https://www.semanticscholar.org/paper/A-Review-on-Capacitive-Type-Sensor-for-Measurement-Kumar-Rajita/2e3d6ede8338e72be9972741eafed7f50388b53a}{A Review on Capacitive-Type Sensor for Measurement of Height of Liquid Level}}
         \end{column}
         \begin{column}{0.50\textwidth}
         
@@ -322,7 +325,7 @@
         \end{column}
         \begin{column}{0.50\textwidth}
         \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Nivel/capacitance_types.png} \\          \tiny{\href{https://www.toshbrocontrols.com/level-transmitter/rf-capacitance-level-transmitter}{By: Toshbrocontrols}}
+            \includegraphics[width = 0.9\linewidth]{Nivel/capacitance_types.png} \\          \tiny{\href{https://www.toshbrocontrols.com/level-transmitter/rf-capacitance-level-transmitter}{By: Toshbrocontrols}}
            
         \end{column}
     \end{columns}
@@ -364,7 +367,7 @@
         \end{column}
         \begin{column}{0.50\textwidth}
         \centering
-            \includegraphics[width = 0.8\linewidth]{fig/Nivel/ultrasonic.jpg}\\
+            \includegraphics[width = 0.8\linewidth]{Nivel/ultrasonic.jpg}\\
             \tiny{\href{https://es.omega.com/technical-learning/transmisores-flujo-nivel-monitoreo-presion-recipiente.html}{By: Omega Engineering}}
         \end{column}
     \end{columns}
@@ -374,7 +377,7 @@
     \begin{columns}[c, onlytextwidth]
         \begin{column}{0.5\textwidth}
                 \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Nivel/radar}\\           \tiny{\href{http://www.edcontrol.com/index.php/instrumentacion/item/12-confusion-en-el-mundo-de-las-mediciones-de-nivel-por-radar-no-es-para-tanto}{Técnicas de radar}}
+            \includegraphics[width = 0.9\linewidth]{Nivel/radar}\\           \tiny{\href{http://www.edcontrol.com/index.php/instrumentacion/item/12-confusion-en-el-mundo-de-las-mediciones-de-nivel-por-radar-no-es-para-tanto}{Técnicas de radar}}
         \end{column}
         \begin{column}{0.50\textwidth}
         
@@ -402,7 +405,7 @@
         \end{column}
         \begin{column}{0.50\textwidth}
         \centering
-            \includegraphics[width = 0.8\linewidth]{fig/Nivel/radiación.png}\\
+            \includegraphics[width = 0.8\linewidth]{Nivel/radiación.png}\\
             \tiny{Tomado de \cite{sole2005instrumentacion}}
         \end{column}
     \end{columns}
@@ -412,7 +415,7 @@
     \begin{columns}[c, onlytextwidth]
         \begin{column}{0.5\textwidth}
                 \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Nivel/lasersensor.jpg}\\           \tiny{\href{https://www.mouser.com/new/stmicroelectronics/stm-vl53lox-sensor/}{STMicroelectronics VL53L0X Time-of-Flight Ranging Sensor}}
+            \includegraphics[width = 0.9\linewidth]{Nivel/lasersensor.jpg}\\           \tiny{\href{https://www.mouser.com/new/stmicroelectronics/stm-vl53lox-sensor/}{STMicroelectronics VL53L0X Time-of-Flight Ranging Sensor}}
         \end{column}
         \begin{column}{0.50\textwidth}
         
@@ -467,7 +470,7 @@
         \end{column}
         \begin{column}{0.50\textwidth}
         \centering
-            \includegraphics[width = 0.8\linewidth]{fig/Nivel/solido_diafragma.jpg}\\
+            \includegraphics[width = 0.8\linewidth]{Nivel/solido_diafragma.jpg}\\
             \tiny{\href{https://www.dastecsrl.com.ar/productos/nivel/nivel-puntual/diafragma/bm45-interruptor-de-diafragma-estandar-para-materiales-secos-de-flujo-libre-no-peligrosos}{By: DASTEC}}
         \end{column}
     \end{columns}
@@ -477,7 +480,7 @@
     \begin{columns}[c, onlytextwidth]
         \begin{column}{0.5\textwidth}
                 \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Nivel/vibracion.png}\\ \tiny{\href{https://www.secoin.com.uy/productos/}{By: Secoin}}
+            \includegraphics[width = 0.9\linewidth]{Nivel/vibracion.png}\\ \tiny{\href{https://www.secoin.com.uy/productos/}{By: Secoin}}
         \end{column}
         
         \begin{column}{0.50\textwidth}
@@ -506,7 +509,7 @@
         \end{column}
         \begin{column}{0.50\textwidth}
         \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Nivel/PaletaRotativa.jpg}\\
+            \includegraphics[width = 0.9\linewidth]{Nivel/PaletaRotativa.jpg}\\
             \tiny{\href{https://www.dastecsrl.com.ar/divisiones/caudal-nivel-presion-humedad-y-pesaje/nivel-puntual/paleta-rotativa/bmrx-detector-de-nivel-por-paleta-rotativa-para-solidos}{By: DASTEC}}
         \end{column}
     \end{columns}
@@ -555,9 +558,8 @@
 
 
 \begin{frame}{Referencias}
-\bibliographystyle{ieeetr}
 \footnotesize
-\bibliography{comunes/referencias}
+\printbibliography
 \end{frame}
 
 \end{document}

@@ -1,0 +1,9 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is '05_peso.blg'
+[187] biber-MSWIN64:342> INFO - === 
+[241] Biber.pm:421> INFO - Reading '05_peso.bcf'
+[350] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[366] bbl.pm:676> INFO - Writing '05_peso.bbl' with encoding 'UTF-8'
+[366] bbl.pm:779> INFO - Output to 05_peso.bbl
+[366] Biber.pm:132> WARN - The file '05_peso.bcf' does not contain any citations!
+[367] Biber.pm:134> INFO - WARNINGS: 1

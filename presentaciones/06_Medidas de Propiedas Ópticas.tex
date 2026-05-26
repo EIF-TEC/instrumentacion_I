@@ -1,15 +1,18 @@
 \documentclass[aspectratio=169]{beamer}
+\makeatletter
+\def\input@path{{../common/}}
+\makeatother
 \usetheme{Bruno}
-\input{comunes/preamble}
+\input{preamble}
 \title{Instrumentación I: \\ \emph{Medidas de Propiedades}\\ \emph{Ópticas}}
 \author{
     Juan J. Rojas, Hugo Sanchez Ortiz
 }
 \institute{Instituto Tecnológico de Costa Rica}
 \date{\today}
-\background{fig/background.jpg}
+\background{background.jpg}
 \begin{document}
-\input{comunes/postamble}
+\input{postamble}
 \maketitle
 
 \newcommand{\blackandwhite}{white} %change this at the end
@@ -25,7 +28,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Optica/Luz.jpg}
+            \includegraphics[width = 0.9\linewidth]{../figures/Optica/Luz.jpg}
             
             \tiny{Tomado de \href{https://www.xataka.com/espacio/que-viajar-a-velocidad-luz-teoricamente-imposible-1}{Xataka}}
             
@@ -45,7 +48,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.8\linewidth]{fig/Optica/UsosRefracccion_Radiacion.PNG}
+            \includegraphics[width = 0.8\linewidth]{../figures/Optica/UsosRefracccion_Radiacion.PNG}
             
             \tiny{Tomado de \cite{Fraden_2016}}
             \tiny{Ejemplos de sistemas ópticos que usan refracción (a) y reflexión (a,b,c)}
@@ -58,7 +61,7 @@
 \begin{columns}[c, onlytextwidth]
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 1\linewidth]{fig/Optica/onda-partícula.png}\\
+            \includegraphics[width = 1\linewidth]{../figures/Optica/onda-partícula.png}\\
              \tiny{Tomado de: \href{https://www.bbc.com/mundo/noticias-52815076}{Física cuántica: qué es la dualidad partícula-onda de la luz y cómo su descubrimiento revolucionó la ciencia}}
         \end{column}
         \begin{column}{0.55\textwidth}
@@ -77,7 +80,7 @@
 \begin{columns}[c, onlytextwidth]
         \begin{column}{0.4\textwidth}
             \centering
-            \includegraphics[width = 0.48\linewidth]{fig/Optica/Espectro.png}\\
+            \includegraphics[width = 0.48\linewidth]{../figures/Optica/Espectro.png}\\
         \end{column}
         \begin{column}{0.6\textwidth}
             \begin{itemize}
@@ -91,7 +94,7 @@
 
 \begin{frame}{Espectro Electromagnético y Óptico}
             \centering
-            \includegraphics[width = 0.8\linewidth]{fig/Optica/1200px-EM_Spectrum_Properties_es.svg.png}\\
+            \includegraphics[width = 0.8\linewidth]{../figures/Optica/1200px-EM_Spectrum_Properties_es.svg.png}\\
             \tiny{Tomado de: \href{https://es.wikipedia.org/wiki/Espectro_visible}{Wikicommons}}
 \end{frame}
 
@@ -101,7 +104,7 @@
             \end{itemize}
             \centering
             
-            \includegraphics[width = 1\linewidth]{fig/Optica/Espectro Visible.png}\\
+            \includegraphics[width = 1\linewidth]{../figures/Optica/Espectro Visible.png}\\
             \tiny{Tomado de: \href{https://es.wikipedia.org/wiki/Espectro_electromagnético}{Wikicommons}}
 \end{frame}
 
@@ -121,7 +124,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.8\linewidth]{fig/Optica/ondas.jpg}\\
+            \includegraphics[width = 0.8\linewidth]{../figures/Optica/ondas.jpg}\\
             \tiny{Tomado de: \href{https://www.viasat.com/es-mx/acerca-de-nosotros/sala-de-prensa/blog/que-son-las-ondas-de-radio-y-como-las-usan-los-satelites/}{Acá}}
         \end{column}
     \end{columns}
@@ -154,7 +157,7 @@
         \begin{column}{0.45\textwidth}
             \centering
             \centering
-            \includegraphics[width = 1\linewidth]{fig/Optica/amplitud.jpg}
+            \includegraphics[width = 1\linewidth]{../figures/Optica/amplitud.jpg}
             \vspace{0.5cm}
             
             \tiny{Tomado de \cite{Fraden_2016}}
@@ -207,7 +210,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Optica/Radiometry.PNG}
+            \includegraphics[width = 0.9\linewidth]{../figures/Optica/Radiometry.PNG}
             
             \tiny{Tomado de \cite{Fraden_2016}}
             
@@ -236,7 +239,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Optica/Radiometry.PNG}
+            \includegraphics[width = 0.9\linewidth]{../figures/Optica/Radiometry.PNG}
             
             \tiny{Tomado de \cite{Fraden_2016}}
             
@@ -260,7 +263,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Optica/lense.PNG}
+            \includegraphics[width = 0.9\linewidth]{../figures/Optica/lense.PNG}
             
             \tiny{Tomado de \cite{Fraden_2016}}
             
@@ -273,7 +276,7 @@
     \begin{columns}[c, onlytextwidth]
     \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Optica/reflection.PNG}
+            \includegraphics[width = 0.9\linewidth]{../figures/Optica/reflection.PNG}
             \tiny{Tomado de \cite{Fraden_2016}}
             \tiny{Espejo en segunda interfaz}
         \end{column}
@@ -290,7 +293,7 @@
 
 \begin{frame}{Reflexión}
             \centering
-            \includegraphics[width = 0.7\linewidth]{fig/Optica/Reflectance_materials.PNG}\\
+            \includegraphics[width = 0.7\linewidth]{../figures/Optica/Reflectance_materials.PNG}\\
             \tiny{Tomado de \cite{Fraden_2016}}
             \tiny{Reflectancia espectral de algunos materiales}
 
@@ -312,7 +315,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Optica/atenuacion.png}
+            \includegraphics[width = 0.9\linewidth]{../figures/Optica/atenuacion.png}
             
             \tiny{Tomado de \cite{Fraden_2016}}
             
@@ -325,7 +328,7 @@
     \begin{columns}[c, onlytextwidth]
     \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.7\linewidth]{fig/Optica/Prisms_with_high_and_low_dispersion.png}\\
+            \includegraphics[width = 0.7\linewidth]{../figures/Optica/Prisms_with_high_and_low_dispersion.png}\\
             \tiny{Tomado de: \href{https://es.wikipedia.org/wiki/Dispersición_refractiva}{Wikicommons}}
         \end{column}
         \begin{column}{0.55\textwidth}
@@ -343,7 +346,7 @@
 
 \begin{frame}{Refracción, reflexión, atenuación y dispersión}
             \centering
-            \includegraphics[width = 6cm]{fig/Optica/microscopio_optico.png}\\
+            \includegraphics[width = 6cm]{../figures/Optica/microscopio_optico.png}\\
             \tiny{Tomado de: \href{https://www.pardell.es/microscopia-optica.html}{Acá}}
 
 \end{frame}
@@ -359,7 +362,7 @@
         \end{column}
         \begin{column}{0.40\textwidth}
             \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Optica/barrido electronico.jpg}\\
+            \includegraphics[width = 0.9\linewidth]{../figures/Optica/barrido electronico.jpg}\\
             \tiny{Tomado de \href{https://todoenpolimeros.com/2019/01/07/microscopio-electronico-de-barrido/}{acá}}
         \end{column}
     \end{columns}
@@ -367,7 +370,7 @@
 
 \begin{frame}{Absorción, fotoconductividad y efecto fotoeléctrico}
     \centering
-    \includegraphics[width=5.5cm]{fig/Optica/Silicon.png}
+    \includegraphics[width=5.5cm]{../figures/Optica/Silicon.png}
 \end{frame}
 
 \begin{frame}{Absorción}
@@ -386,7 +389,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-    \includegraphics[width = 1\linewidth]{fig/Optica/Absorción.png}\\
+    \includegraphics[width = 1\linewidth]{../figures/Optica/Absorción.png}\\
             \tiny{Tomado de \cite{Fraden_2016}}
             \tiny{Fotoefecto en un semiconductor}
         \end{column}
@@ -403,7 +406,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-    \includegraphics[width = 1\linewidth]{fig/Optica/photocondutivity.jpg}\\
+    \includegraphics[width = 1\linewidth]{../figures/Optica/photocondutivity.jpg}\\
             \tiny{Tomado de \href{https://www.sciencedirect.com/topics/materials-science/photoconductivity/}{Science Direct}}
         \end{column}
     \end{columns}
@@ -420,7 +423,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-    \includegraphics[width = 1\linewidth]{fig/Optica/Fotoefecto.png}\\
+    \includegraphics[width = 1\linewidth]{../figures/Optica/Fotoefecto.png}\\
             \tiny{Tomado de \cite{Fraden_2016}}
             \tiny{Efecto Fotoeléctrico en un semiconductor}
         \end{column}
@@ -434,7 +437,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 1\linewidth]{fig/Optica/Light_sensor.png}
+            \includegraphics[width = 1\linewidth]{../figures/Optica/Light_sensor.png}
             \tiny{Tomado de \cite{Fraden_2016}}
         \end{column}
     \end{columns}
@@ -454,7 +457,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 1\linewidth]{fig/Optica/fotodiodos.PNG}
+            \includegraphics[width = 1\linewidth]{../figures/Optica/fotodiodos.PNG}
             \tiny{Tomado de \cite{Fraden_2016}}
             \tiny{Conexión de un fotodiodo a) circuito equivalente, b)circuito de carga}
         \end{column}
@@ -472,7 +475,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.9\linewidth]{fig/Optica/fototransistor.PNG}
+            \includegraphics[width = 0.9\linewidth]{../figures/Optica/fototransistor.PNG}
             \tiny{Tomado de \cite{Fraden_2016}}
             \tiny{Bandas energéticas en el transistor}
         \end{column}
@@ -490,7 +493,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 1\linewidth]{fig/Optica/fotoresistores.PNG}
+            \includegraphics[width = 1\linewidth]{../figures/Optica/fotoresistores.PNG}
             \tiny{Tomado de \cite{Fraden_2016}}
             \tiny{Conexión de un fotodiodo a) circuito equivalente, b)circuito de carga}
         \end{column}
@@ -527,7 +530,7 @@
             \end{itemize}
         \end{column}
         \begin{column}{0.40\textwidth}
-            \includegraphics[width = 1\linewidth]{fig/Optica/barrera.jpg}
+            \includegraphics[width = 1\linewidth]{../figures/Optica/barrera.jpg}
 
             \tiny{Tomado de \href{https://www.directindustry.es/prod/delta/product-68641-561968.html}{acá}}
         \end{column}
@@ -538,7 +541,7 @@
     \begin{columns}[c, onlytextwidth]
     \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.7\linewidth]{fig/Optica/microscopio.jpg}\\
+            \includegraphics[width = 0.7\linewidth]{../figures/Optica/microscopio.jpg}\\
             \tiny{Tomado de: \href{https://es.wikipedia.org/wiki/Microscopio_electrónico_de_barrido}{Wikicommons}}
         \end{column}
         \begin{column}{0.55\textwidth}
@@ -554,16 +557,16 @@
 
 \begin{frame}{Microscopio de barrido electrónico}
     \centering
-    \includegraphics[width=8cm]{fig/Optica/Microscopia.jpg}
+    \includegraphics[width=8cm]{../figures/Optica/Microscopia.jpg}
      \tiny{Tomado de: \href{https://cienciaexplicada.com/microscopio-electronico-de-barrido.html}{Acá}}
 \end{frame}
 
 
 
 \begin{frame}{Referencias}
-\bibliographystyle{ieeetr}
+\printbibliography
 \footnotesize
-\bibliography{comunes/referencias}
+
 \end{frame}
 
 \end{document}

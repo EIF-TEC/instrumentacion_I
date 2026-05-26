@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import serial
 import csv
 from datetime import datetime
@@ -10,8 +11,7 @@ narchivo = 1
 mediciones = 10
 
 def data_fig():
-    plt.plot(sec,pres)
-
+    plt.plot(sec, pres)
 
 datos = []
 sec = []
@@ -34,7 +34,7 @@ seguir = input("Cualquier tecla")
 # Guardar en CSV
 with open(f"{nombre}_{narchivo}.csv", "w", newline="") as f:
     writer = csv.writer(f)
-    writer.writerow(["timestamp", "Temperatura (°C)", "Presión (hPa)"])  # encabezados
+    writer.writerow(["timestamp", "Temperatura (C)", "Presion (hPa)"])  # encabezados
     writer.writerows(datos)
 
 print("Datos guardados en mediciones.csv")
