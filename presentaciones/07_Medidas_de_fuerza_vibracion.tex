@@ -1,15 +1,18 @@
 \documentclass[aspectratio=169]{beamer}
+\makeatletter
+\def\input@path{{../common/}}
+\makeatother
 \usetheme{Bruno}
-\input{comunes/preamble}
+\input{preamble}
 \title{Instrumentación I: \\ \emph{Medidas de fuerza}\\ \emph{y vibración}}
 \author{
     Juan J. Rojas, Hugo Sanchez Ortiz
 }
 \institute{Instituto Tecnológico de Costa Rica}
 \date{\today}
-\background{fig/background.jpg}
+\background{background.jpg}
 \begin{document}
-\input{comunes/postamble}
+\input{postamble}
 \maketitle
 
 \newcommand{\blackandwhite}{white} %change this at the end
@@ -38,8 +41,8 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.8\linewidth]{fig/Fuerza_Vibracion/fuerza1.JPG}
-            \includegraphics[width = 0.8\linewidth]{fig/Fuerza_Vibracion/fuerza2.JPG}
+            \includegraphics[width = 0.8\linewidth]{Fuerza_Vibracion/fuerza1.JPG}
+            \includegraphics[width = 0.8\linewidth]{Fuerza_Vibracion/fuerza2.JPG}
             \vspace{0.5cm}
             
             \tiny{Tomado de \cite{Fraden_2016}}
@@ -61,8 +64,8 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 0.8\linewidth]{fig/Fuerza_Vibracion/fuerza1.JPG}
-            \includegraphics[width = 0.8\linewidth]{fig/Fuerza_Vibracion/fuerza2.JPG}
+            \includegraphics[width = 0.8\linewidth]{Fuerza_Vibracion/fuerza1.JPG}
+            \includegraphics[width = 0.8\linewidth]{Fuerza_Vibracion/fuerza2.JPG}
             \vspace{0.5cm}
             
             \tiny{Tomado de \cite{Fraden_2016}}
@@ -79,13 +82,13 @@
                 \item Una galga extensométrica es un sensor elástico resistivo cuya resistencia es una función de la deformación aplicada
                 \item La relación entre la resistencia y la fuerza aplicada está definida por el effecto \emph{piezorresistivo}:
                 \begin{equation*}
-                    \dfrac{dR}{R} = S_e e
+                    \frac{\Delta R}{R} = S_e e
                 \end{equation*}
                 donde $S_e$ es la sensibilidad de la galga extensométrica, $e$ es la deformación unitaria -ambas cantidades adimensionales- y $R$ es la resistencia
             \end{itemize}
         \end{column}
         \begin{column}{0.40\textwidth}
-            \includegraphics[width = 1\linewidth]{fig/Fuerza_Vibracion/straingauge.jpg}
+            \includegraphics[width = 1\linewidth]{Fuerza_Vibracion/straingauge.jpg}
 
             \tiny{Tomado de \href{https://www.partco.fi/16584-thickbox_default/venymaliuskaanturi350ohm.jpg}{acá}}
         \end{column}
@@ -107,11 +110,11 @@
         \end{column}
         \begin{column}{0.40\textwidth}
             \centering
-            \includegraphics[width = 0.5\linewidth]{fig/Fuerza_Vibracion/magnetoelastico.JPG}
+            \includegraphics[width = 0.5\linewidth]{Fuerza_Vibracion/magnetoelastico.JPG}
             
             \tiny{Tomado de \cite{pallas2012sensors}}
             
-            \includegraphics[width = 0.6\linewidth]{fig/Fuerza_Vibracion/Torque-Sensor.png}
+            \includegraphics[width = 0.6\linewidth]{Fuerza_Vibracion/Torque-Sensor.png}
             
             \tiny{Tomado de \href{https://www.methodesensor.com/industries/industrial/torque-sensing/}{acá}}
         \end{column}
@@ -131,7 +134,7 @@
 %             \end{itemize}
 %         \end{column}
 %         \begin{column}{0.40\textwidth}
-%             \includegraphics[width = 1\linewidth]{fig/Fuerza_Vibracion/straingauge.jpg}
+%             \includegraphics[width = 1\linewidth]{Fuerza_Vibracion/straingauge.jpg}
 
 %             \tiny{Tomado de \href{https://www.partco.fi/16584-thickbox_default/venymaliuskaanturi350ohm.jpg}{acá}}
 %         \end{column}
@@ -152,7 +155,7 @@
         \end{column}
         \begin{column}{0.45\textwidth}
             \centering
-            \includegraphics[width = 1\linewidth]{fig/Fuerza_Vibracion/acel.JPG}
+            \includegraphics[width = 1\linewidth]{Fuerza_Vibracion/acel.JPG}
 
             \tiny{Tomado de \cite{Fraden_2016}}
         \end{column}
@@ -171,9 +174,9 @@
         \end{column}
         \begin{column}{0.35\textwidth}
             \centering
-            \includegraphics[width = 0.8\linewidth]{fig/Fuerza_Vibracion/memscapacc.JPG}
+            \includegraphics[width = 0.8\linewidth]{Fuerza_Vibracion/memscapacc.JPG}
             
-            \includegraphics[width = 0.8\linewidth]{fig/Fuerza_Vibracion/memscapacc2.JPG}
+            \includegraphics[width = 0.8\linewidth]{Fuerza_Vibracion/memscapacc2.JPG}
 
             \tiny{Tomado de \cite{Fraden_2016}}
         \end{column}
@@ -191,7 +194,7 @@
         \end{column}
         \begin{column}{0.35\textwidth}
             \centering
-            \includegraphics[width = 0.8\linewidth]{fig/Fuerza_Vibracion/memspiezoacc.JPG}
+            \includegraphics[width = 0.8\linewidth]{Fuerza_Vibracion/memspiezoacc.JPG}
             
             \tiny{Tomado de \cite{Fraden_2016}}
         \end{column}
@@ -209,7 +212,7 @@
         \end{column}
         \begin{column}{0.4\textwidth}
             \centering
-            \includegraphics[width = 1\linewidth]{fig/Fuerza_Vibracion/piezo.jpg}
+            \includegraphics[width = 1\linewidth]{Fuerza_Vibracion/piezo.jpg}
             
             \tiny{Tomado de \href{www.instrumentationtoday.com}{acá}}
         \end{column}
@@ -223,14 +226,13 @@
                 \item Estos sensores son microfabricados (MEMS)
             \end{itemize}
             \centering
-            \includegraphics[width = 0.5\linewidth]{fig/Fuerza_Vibracion/memsheatedgasacc.JPG}
+            \includegraphics[width = 0.5\linewidth]{Fuerza_Vibracion/memsheatedgasacc.JPG}
             \tiny{Tomado de \cite{Fraden_2016}}
 \end{frame}
 
 \begin{frame}{Referencias}
-\bibliographystyle{ieeetr}
 \footnotesize
-\bibliography{comunes/referencias}
+\printbibliography
 \end{frame}
 
 \end{document}

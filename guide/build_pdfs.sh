@@ -118,11 +118,14 @@ build_single_guide() {
 EOF
 
   echo "[build] $tex -> ${base}.pdf"
-  build_tex "$wrapper"
-  mv -f -- "${wrapper_base}.pdf" "${base}.pdf"
+  build_tex "$wrapper" || true
+  latexmk -c "$wrapper" >/dev/null 2>&1 || true
+  mv -f -- "${wrapper_base}.pdf" "${base}.pdf" || true
 
   cleanup_base "$wrapper_base"
-  rm -f -- "$wrapper"
+  # Remove any remaining wrapper files
+  find . -maxdepth 1 -type f -name "${wrapper_base}.*" ! -name "*.pdf" -delete || true
+  rm -f -- "$wrapper" || true
 }
 
 discover_guides
@@ -139,6 +142,7 @@ fi
 if [[ -f "00_instructivo.tex" ]]; then
   echo "[build] 00_instructivo.tex"
   build_tex "00_instructivo.tex"
+  latexmk -c "00_instructivo.tex" >/dev/null 2>&1 || true
   cleanup_base "00_instructivo"
 fi
 

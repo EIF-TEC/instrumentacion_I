@@ -38,12 +38,15 @@ build_tex() {
 for tex in [0-9][0-9]_*.tex; do
   if [[ -f "$tex" ]]; then
     echo "[build] $tex"
-    build_tex "$tex"
+    build_tex "$tex" || true
+    latexmk -c "$tex" >/dev/null 2>&1 || true
 
     base="${tex%.tex}"
     for ext in "${cleanup_extensions[@]}"; do
       rm -f -- "${base}.${ext}"
     done
+    # Remove any remaining files except .tex and .pdf using find with proper quoting
+    find . -maxdepth 1 -type f -name "${base}.*" ! -name "*.tex" ! -name "*.pdf" -delete || true
   fi
 done
 

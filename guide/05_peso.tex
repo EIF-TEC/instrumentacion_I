@@ -1,4 +1,24 @@
-% !TEX root = 00_instructivo.tex
+\documentclass[12pt,letterpaper]{report}
+\makeatletter
+\def\input@path{{../common/}{../guide/}{../data/}{../code/}}
+\makeatother
+\input{preamble}
+\input{arduinoLanguage.tex}
+\usepackage{csvsimple}
+\usepackage{geometry}
+\geometry{left=18mm,right=18mm,top=21mm,bottom=21mm,headheight=15pt}
+\setlength\parindent{0pt}
+\renewcommand{\labelenumi}{\alph{enumi}.}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Laboratorio de Instrumentación I}
+\rhead{\begin{picture}(0,0) \put(-60,0){\includegraphics[width=20mm]{logo.png}} \end{picture}}
+\newcommand{\obj}{Objetivos}
+\newcommand{\mat}{Materiales y equipo}
+\newcommand{\pro}{Procedimiento}
+\newcommand{\capacidad}{Al finalizar este laboratorio el estudiante estará en capacidad de:}
+\newcommand{\antesde}{Antes de empezar el laboratorio presente el siguiente cuestionario lleno.}
+\begin{document}
 \chapter{Sensores de peso}
 \section{\obj}
 \capacidad
@@ -18,8 +38,14 @@
 \section{Actividad 1}
 \subsection{\pro}
 \begin{enumerate}
-    \item Conecte el amplificador HX711 tal como se muestra en la Figura %\ref{fig:pes1}
-    \item Copie el siguiente código en el IDE de Arduino (el codigo se puede encontrar en: \href{https://github.com/juanjorojash/instrumentacion_I/blob/master/code/L04/L04.ino}{GitHub})
+    \item Conecte el amplificador HX711 tal como se muestra en la Figura \ref{fig:pes1}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\textwidth]{hx711-arduino.jpeg}
+        \caption{Proceso de calibración del módulo HX711}
+        \label{fig:pes1}
+    \end{figure}
+    \item Copie el siguiente código en el IDE de Arduino. Es importante que revisen que los pines en el código sean los mismos que los de la figura (el codigo se puede encontrar en: \href{https://github.com/juanjorojash/instrumentacion_I/blob/master/code/L04/L04.ino}{GitHub})
     \lstinputlisting[language=Arduino,numbers=none]{../code/L04/L04.ino}  
     \item Analice cada linea de código y cuando entienda su funcionamiento corra el \emph{sketch} usando el botón \emph{Upload}
     \item En la terminal serial ingrese la letra "c", esto iniciará un proceso de calibración, siga las instrucciones del menú, calibre con peso máximo de 200 gramos.
@@ -81,6 +107,7 @@
 %     \label{fig:pes1}
 % \end{figure}
 
+
 \subsection{Análisis}
 \begin{enumerate}
     \item ¿Cuál es la resolución teórica del módulo HX711 si trabaja con un convertidor de 24 bits y una celda de carga de \SI{1}{\kilogram}? ¿Qué implicaciones tiene esto en la medición de masas pequeñas? Como recomendación, utilizar la siguiente ecuación:
@@ -89,3 +116,5 @@
     \end{equation*} 
     \item ¿Observó alguna diferencia entre las mediciones realizadas con diferentes puntos de calibración?¿Cuál fue mejor?
 \end{enumerate}
+\printbibliography
+\end{document}
